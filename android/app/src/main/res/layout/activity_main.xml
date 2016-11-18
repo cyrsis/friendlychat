@@ -11,22 +11,14 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.google.firebase.codelab.friendlychat.MainActivity">
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_alignParentTop="true"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id">
-    </com.google.android.gms.ads.AdView>
+
 
     <android.support.v7.widget.RecyclerView
         android:id="@+id/messageRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@+id/linearLayout"
-        android:layout_below="@+id/adView"/>
+                                />
 
     <LinearLayout
         android:orientation="horizontal"
@@ -38,19 +30,23 @@
         android:id="@+id/linearLayout">
 
         <EditText
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:scrollbars="vertical"
+            android:fadeScrollbars="false"
+            android:inputType="textMultiLine"
+            android:maxLines="10"
+            android:minLines="1"
             android:id="@+id/messageEditText"
-            android:layout_gravity="center_vertical"
             android:layout_weight="1"/>
 
         <Button
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:text="SEND"
             android:enabled="false"
             android:id="@+id/sendButton"
-            android:layout_gravity="bottom"/>
+            android:layout_gravity="center_vertical"/>
 
     </LinearLayout>
 
