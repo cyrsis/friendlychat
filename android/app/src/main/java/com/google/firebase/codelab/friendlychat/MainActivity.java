@@ -176,9 +176,9 @@ public class MainActivity extends AppCompatActivity implements
         mMessageRecyclerView.setAdapter(mFirebaseAdapter);
 
         // Initialize and request AdMob ad.
-       // mAdView = (AdView) findViewById(R.id.adView);
-       // AdRequest adRequest = new AdRequest.Builder().build();
-        //mAdView.loadAd(adRequest);
+        mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         // Initialize Firebase Measurement.
         mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
